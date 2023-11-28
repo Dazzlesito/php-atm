@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #F2F2F2;
+  color: #131240;
+  margin: 0.5rem;
+}
+
+label {
+  display: inline-block;
+  padding: 0.625rem 0.125rem 0rem;
+  font-size: 1rem;
+  color: #78778C;
+  font-weight: 400;
+}
+
+.title {
+  margin: 0rem;
+  font-weight: 200;
+  font-size: 7rem;
+  padding: 0rem 0.25rem;
+  display: block;
+  text-align: center;
+  cursor: default;
+}
+
+.current {
+  margin: 4rem 0rem 4rem;
+  padding: 0rem 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.current label {
+  padding: 0rem;
+  color: #131240;
+  font-size: 1.125rem;
+}
+
+.balance {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.actions {
+  padding: 0rem 0.25rem;
+}
+
+.auth-page {
+  background-color: white;
+  border-radius: 0.375rem;
+  
+  padding: 1rem 2.25rem 3rem;
+  margin: 2rem;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);
+}
+
+.auth-page .title {
+  font-size: 4rem;
+}
+
+.grip-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.item-2 {
+  text-align: right;
+  padding: 0.625rem 0.125rem 0rem;
+}
+
+::selection {
+  color: white;
+  background-color: #32D9D9;
+}
