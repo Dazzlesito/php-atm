@@ -11,14 +11,14 @@
     </head>
     <body class="antialiased">
         <h1 class="title">PHP<br> ATM</h1>
-        
+
         <div class="current">
             <label for="balance">Current balance</label>
             <span class="balance" id="balance">
                 ${{$balance}}
             </span>
         </div>
-        
+
         <div class="actions">
             <form class="withdraw">
                 <label for="wmoney">Withdraw money</label>
