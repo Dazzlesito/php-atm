@@ -6,27 +6,34 @@
 
         <title>PHP ATM</title>
 
-        <link href="{{URL::asset('css/phpatm.css');}}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
 
     </head>
-    <body class="antialiased">
-        <div class="auth-page">
-            <h1 class="title">PHP<br> ATM</h1>
 
-            <h2>Login</h2>
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            color: #131240;
+        }
 
-            <form class="login">
-                <label for="user">User</label>
-                <x-input type="text" name="user" id="user"></x-input>
+        ::selection {
+            color: white;
+            background-color: #32D9D9;
+        }
+    </style>
 
-                <div class="grip-container">
-                    <div class="item-1"><label for="password">Password</label></div>
-                    <div class="item-2"><a href="https://www.youtube.com/watch?v=BbeeuzU5Qc8&t=1s">Forgot password?</a></div>
-                </div>
-                <x-input type="text" name="password" id="password"></x-input>
-                <x-button value="Login"></x-button>
-            </form>
-        </div>
+    <body style="background-color: #F2F2F2; margin: 0.5rem;" class="antialiased">
+        <x-square>
+            <x-title size="4rem"></x-title>
+            <x-form button="Login" action="Login">
+                <x-input type="text" id="user" label="User"></x-input>
+
+                <x-input type="password" id="password" label="Password"></x-input>
+            </x-form>
+            <a href="https://www.youtube.com/watch?v=BbeeuzU5Qc8&t=1s" style="">Forgot password?</a>
+        </x-square>
     </body>
 </html>
 

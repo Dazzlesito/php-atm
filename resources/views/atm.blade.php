@@ -6,32 +6,37 @@
 
         <title>PHP ATM</title>
 
-        <link href="{{URL::asset('css/phpatm.css');}}" rel="stylesheet">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
     </head>
-    <body class="antialiased">
-        <h1 class="title">PHP<br> ATM</h1>
 
-        <div class="current">
-            <label for="balance">Current balance</label>
-            <span class="balance" id="balance">
-                ${{$balance}}
-            </span>
-        </div>
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            color: #131240;
+        }
 
-        <div class="actions">
-            <form class="withdraw">
-                <label for="wmoney">Withdraw money</label>
-                <x-input type="number" name="wmoney" id="wmoney" placeholder="e.g. 250.000"></x-input>
-                <x-button value="Withdraw"></x-button>
-            </form>
+        ::selection {
+            color: white;
+            background-color: #32D9D9;
+        }
+    </style>
 
-            <form class="deposit">
-                <label for="dmoney">Deposit money</label>
-                <x-input type="number" name="dmoney" id="dmoney" placeholder="e.g. 1'000.000"></x-input>
-                <x-button value="Deposit"></x-button>
-            </form>
-        </div>
+    <body style="background-color: #F2F2F2; margin: 0.5rem;" class="antialiased">
+        <x-title size="7rem"></x-title>
+
+        <x-current-balance>${{ $balance }}</x-current-balance>
+
+        <x-actions action="Move your money">
+            <x-form button="Withdraw" class="withdraw">
+                <x-input type="number" id="wmoney" label="Withdraw money" placeholder="e.g. 250.000"></x-input>
+            </x-form>
+
+            <x-form button="Deposit" class="deposit">
+                <x-input type="number" id="dmoney" label="Deposit money" placeholder="e.g. 1'000.000"></x-input>
+            </x-form>
+        </x-actions>
     </body>
 </html>
 

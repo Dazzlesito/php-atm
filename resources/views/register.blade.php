@@ -6,27 +6,32 @@
 
         <title>PHP ATM</title>
 
-        <link href="{{URL::asset('css/phpatm.css');}}" rel="stylesheet">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
     </head>
-    <body class="antialiased">
-        <div class="auth-page">
-            <h1 class="title">PHP<br> ATM</h1>
-            
-            <h2>Register</h2>
 
-            <form class="register">
-                <label for="user">User</label>
-                <x-input type="text" name="user" id="user"></x-input>
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            color: #131240;
+        }
 
-                <label for="email">Email</label>
-                <x-input type="text" name="email" id="email"></x-input>
+        ::selection {
+            color: white;
+            background-color: #32D9D9;
+        }
+    </style>
 
-                <label for="password">Password</label>
-                <x-input type="text" name="password" id="password"></x-input>
-                <x-button value="Register"></x-button>
-            </form>
-        </div>
+    <body style="background-color: #F2F2F2; margin: 0.5rem;" class="antialiased">
+        <x-square>
+            <x-title size="4rem"></x-title>
+            <x-form button="Register" action="Register">
+                <x-input type="text" id="user" label="User"></x-input>
+                <x-input type="email" id="email" label="Email"></x-input>
+                <x-input type="password" id="password" label="Password"></x-input>
+            </x-form>
+        </x-square>
     </body>
 </html>
 
