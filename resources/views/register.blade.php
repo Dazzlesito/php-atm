@@ -34,6 +34,3 @@
         </x-square>
     </body>
 </html>
-
-
-

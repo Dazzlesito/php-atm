@@ -1,7 +1,7 @@
 @props(['button', 'action' => ""])
 
 <form>
-    <h2>{{ $action }}</h2>
+    <x-sub-title>{{ $action }}</x-sub-title>
     {{ $slot }}
     <x-button value="{{ $button }}"></x-button>
 </form>
